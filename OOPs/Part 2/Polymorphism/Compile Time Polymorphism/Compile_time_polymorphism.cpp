@@ -1,0 +1,4 @@
+/*
+Compile time polymorphism is also known as static polymorphism. 
+This type of polymorphism can be achieved through function overloading or operator overloading.
+*/
