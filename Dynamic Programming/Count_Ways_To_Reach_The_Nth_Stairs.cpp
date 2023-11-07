@@ -25,7 +25,7 @@ int countt(int n, int i, int dp[]){
         dp[i] = 0;
     }
 
-    if(dp[i]!= -1){ // provide dp array stored value
+    if(dp[i]!= -1){ // if already calculated and store in dp array then return the value, no need to call the recursive function
         return dp[i];
     }
 

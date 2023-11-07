@@ -35,6 +35,20 @@ int minClimbb(vector<int>& cost, int n, vector<int>& dp){
     return dp[n];
 }
 
+
+//Approach 2: Using D.P (Without dp array)
+int minCllimb(vector<int>& cost, int n){
+    if(n==2){ //base case
+        return min(cost[0],cost[1]);
+    }
+
+    for(int i=2;i<n;i++){
+        cost[i] = cost[i] + min(cost[i-1],cost[i-2]);
+    }
+
+    return min(cost[n-1],cost[n-2]);
+}
+
 int main(){
     int n;
     cin>>n;
@@ -47,6 +61,8 @@ int main(){
 
     // cout<<minClimb(cost, n);
 
-    vector<int> dp(n+1,-1);
-    cout<<minClimbb(cost,n,dp);
+    // vector<int> dp(n+1,-1);
+    // cout<<minClimbb(cost,n,dp);
+
+    cout<<minCllimb(cost,n);
 }

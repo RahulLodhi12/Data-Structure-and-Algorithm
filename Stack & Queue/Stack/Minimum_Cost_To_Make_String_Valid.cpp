@@ -28,10 +28,10 @@ int findMinimumCost(string str){
     int a=0,b=0;
     while(st.empty()==0){
         if(st.top() == '{'){
-            a++;
+            a++; // closing bracket
         }
         else{
-            b++;
+            b++; // opening bracket
         }
         st.pop();
     }
