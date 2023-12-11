@@ -4,8 +4,8 @@ using namespace std;
 // Approach 1: Using Recursion
 int solve(int i, int j, int m, int n){
     //base case
-    if(i==m-1 && j==n-1) return 1;
     if(i>=m || j>=n) return 0;
+    if(i==m-1 && j==n-1) return 1;
 
     int down = solve(i+1,j,m,n);
     int right = solve(i,j+1,m,n);
@@ -18,8 +18,8 @@ int solve(int i, int j, int m, int n){
 int dp[101][101];
 int sollve(int i, int j, int m, int n){
     //base case
-    if(i==m-1 && j==n-1) return 1;
     if(i>=m || j>=n) return 0;
+    if(i==m-1 && j==n-1) return 1;
 
     //provide
     if(dp[i][j] != -1) return dp[i][j];
