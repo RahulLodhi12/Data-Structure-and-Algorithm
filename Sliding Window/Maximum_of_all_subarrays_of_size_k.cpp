@@ -8,7 +8,9 @@ vector<int> maxSlidingWindow(vector<int>& arr, int k){
     int n = arr.size();
     while(j<n){
         //calc->j
-        while(!l.empty() && l.back()<arr[j]) l.pop_front();
+        while(!l.empty() && l.back()<arr[j]){
+            l.pop_back();
+        }
         l.push_back(arr[j]);
         if(j-i+1<k){
             j++;
